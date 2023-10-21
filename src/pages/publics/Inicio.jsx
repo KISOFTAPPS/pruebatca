@@ -15,7 +15,7 @@ const inicio = () => {
                     src="/assets/imgs/logoTCA.png"
                     className="max-w-xs rounded-full opacity-90 drop-shadow"
                 />
-                <div>
+                <div className="text-white">
                     <h1 className="text-5xl font-bold">Karim I. Sabag Ochoa</h1>
                     <p className="py-6">
                         Presento como prueba una aplicación CRUD
