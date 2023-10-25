@@ -162,7 +162,7 @@ const Panel = () => {
                                         <th>Primer nombre</th>
                                         <th>Segundo nombre</th>
                                         <th>Apellido</th>
-                                        <th>Genero</th>
+                                        <th>Género</th>
                                         <th>Registro</th>
                                         <th>Activo</th>
                                         <th></th>

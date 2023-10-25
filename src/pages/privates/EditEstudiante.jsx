@@ -245,7 +245,7 @@ const EditEstudiante = () => {
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">
-                                                    *Genero
+                                                    *Género
                                                 </span>
                                             </label>
                                             <select
@@ -340,7 +340,7 @@ const EditEstudiante = () => {
                         <div className="collapse bg-base-200">
                             <input type="radio" name="my-accordion-1" />
                             <div className="collapse-title text-xl font-medium">
-                                Direccion
+                                Dirección
                             </div>
                             <div className="collapse-content flex flex-col xl:flex-row justify-center items-center gap-5">
                                 <div className="max-w-md">
@@ -352,7 +352,7 @@ const EditEstudiante = () => {
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">
-                                                        *Direccion
+                                                        *Dirección
                                                     </span>
                                                 </label>
                                                 <input
@@ -402,7 +402,7 @@ const EditEstudiante = () => {
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">
-                                                        *Codigo postal
+                                                        *Códigos postal
                                                     </span>
                                                 </label>
                                                 <input
@@ -469,9 +469,9 @@ const EditEstudiante = () => {
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>Direccion</th>
+                                                <th>Dirección</th>
                                                 <th>Ciudad</th>
-                                                <th>Codigo postal</th>
+                                                <th>Códigos postal</th>
                                                 <th>Estado</th>
                                                 <th>Acciones</th>
                                                 <th></th>
@@ -594,7 +594,7 @@ const EditEstudiante = () => {
                         <div className="collapse bg-base-200">
                             <input type="radio" name="my-accordion-1" />
                             <div className="collapse-title text-xl font-medium">
-                                Telefono
+                            Teléfono
                             </div>
                             <div className="collapse-content flex flex-col xl:flex-row justify-center items-center gap-5">
                                 <div className="max-w-md">
@@ -606,7 +606,7 @@ const EditEstudiante = () => {
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">
-                                                        *Telefono
+                                                        *Teléfono
                                                     </span>
                                                 </label>
                                                 <input
@@ -632,7 +632,7 @@ const EditEstudiante = () => {
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">
-                                                        *Tipo de telefono
+                                                        *Tipo de teléfono
                                                     </span>
                                                 </label>
                                                 <select
@@ -650,7 +650,7 @@ const EditEstudiante = () => {
                                                     )}
                                                 >
                                                     <option value={"Mobile"}>
-                                                        Movil
+                                                        Móvil
                                                     </option>
                                                     <option value={"Home"}>
                                                         Casa
@@ -666,7 +666,7 @@ const EditEstudiante = () => {
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">
-                                                        *Codigo de pais
+                                                        *Código de pais
                                                     </span>
                                                 </label>
                                                 <input
@@ -692,7 +692,7 @@ const EditEstudiante = () => {
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">
-                                                        *Codigo de area
+                                                        *Código de area
                                                     </span>
                                                 </label>
                                                 <input
@@ -733,8 +733,8 @@ const EditEstudiante = () => {
                                                 <th></th>
                                                 <th>Telefono</th>
                                                 <th>Tipo de telefono</th>
-                                                <th>Codigo de pais</th>
-                                                <th>Codigo de area</th>
+                                                <th>Código de pais</th>
+                                                <th>Código de area</th>
                                                 <th>Acciones</th>
                                                 <th></th>
                                             </tr>
@@ -765,7 +765,7 @@ const EditEstudiante = () => {
                                         .showModal()
                                 }
                             >
-                                Eliminar Estudiante Permanentemente
+                                Eliminar estudiante permanentemente
                             </button>
                             <dialog
                                 id="my_modal_5"
