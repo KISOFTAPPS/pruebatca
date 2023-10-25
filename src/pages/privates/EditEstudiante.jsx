@@ -214,7 +214,7 @@ const EditEstudiante = () => {
                                                         : ""
                                                 }`}
                                                 {...register("middle_name", {
-                                                    required: true,
+                                                    required: false,
                                                     maxLength: 50,
                                                     pattern:
                                                         /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/i,
