@@ -59,9 +59,9 @@ const EmailsEdit = ({ email = {}, index = 0, emailId = "" }) => {
                         pattern: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/i,
                     })}
                 >
-                    <option value="Personal">Personal</option>
-                    <option value="Work">Trabajo</option>
-                    <option value="Other">Otro</option>
+                    <option value={"PERSONAL"}>PERSONAL</option>
+                    <option value={"WORK"}>TRABAJO</option>
+                    <option value={"OTHER"}>OTRO</option>
                 </select>
             </th>
 

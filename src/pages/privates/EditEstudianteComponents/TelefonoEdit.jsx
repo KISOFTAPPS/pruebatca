@@ -66,10 +66,10 @@ const TelefonoEdit = ({ telefono = {}, index = 0, telefonoId = 0 }) => {
                         maxLength: 10,
                     })}
                 >
-                    <option value="Mobile">Movil</option>
-                    <option value="Home">Casa</option>
-                    <option value="Work">Trabajo</option>
-                    <option value="Other">Otro</option>
+                    <option value={"MOBILE"}>MÓVIL</option>
+                    <option value={"HOME"}>CASA</option>
+                    <option value={"WORK"}>TRABAJO</option>
+                    <option value={"OTHER"}>OTRO</option>
                 </select>
             </th>
             <th>

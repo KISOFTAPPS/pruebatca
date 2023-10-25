@@ -261,14 +261,14 @@ const EditEstudiante = () => {
                                                         /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]/i,
                                                 })}
                                             >
-                                                <option value={"Male"}>
-                                                    Masculino
+                                                <option value={"MALE"}>
+                                                    MASCULINO
                                                 </option>
-                                                <option value={"Female"}>
-                                                    Femenino
+                                                <option value={"FEMALE"}>
+                                                    FEMENINO
                                                 </option>
-                                                <option value={"Other"}>
-                                                    Otro
+                                                <option value={"OTHER"}>
+                                                    OTRO
                                                 </option>
                                             </select>
                                         </div>
@@ -301,22 +301,19 @@ const EditEstudiante = () => {
                                                 }`}
                                                 {...register("active", {
                                                     required: true,
-                                                    maxLength: 20,
-                                                    pattern:
-                                                        /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]/i,
                                                 })}
                                             >
                                                 <option
                                                     value={true}
                                                     className="text-green-500"
                                                 >
-                                                    Si
+                                                    SI
                                                 </option>
                                                 <option
                                                     value={false}
                                                     className="text-red-500"
                                                 >
-                                                    No
+                                                    NO
                                                 </option>
                                             </select>
                                         </div>
@@ -548,14 +545,14 @@ const EditEstudiante = () => {
                                                         }
                                                     )}
                                                 >
-                                                    <option value={"Personal"}>
-                                                        Personal
+                                                    <option value={"PERSONAL"}>
+                                                        PERSONAL
                                                     </option>
-                                                    <option value={"Work"}>
-                                                        Trabajo
+                                                    <option value={"WORK"}>
+                                                        TRABAJO
                                                     </option>
-                                                    <option value={"Other"}>
-                                                        Otro
+                                                    <option value={"OTHER"}>
+                                                        OTRO
                                                     </option>
                                                 </select>
                                             </div>
@@ -594,7 +591,7 @@ const EditEstudiante = () => {
                         <div className="collapse bg-base-200">
                             <input type="radio" name="my-accordion-1" />
                             <div className="collapse-title text-xl font-medium">
-                            Teléfono
+                                Teléfono
                             </div>
                             <div className="collapse-content flex flex-col xl:flex-row justify-center items-center gap-5">
                                 <div className="max-w-md">
@@ -649,17 +646,17 @@ const EditEstudiante = () => {
                                                         }
                                                     )}
                                                 >
-                                                    <option value={"Mobile"}>
-                                                        Móvil
+                                                    <option value={"MOBILE"}>
+                                                        MÓVIL
                                                     </option>
-                                                    <option value={"Home"}>
-                                                        Casa
+                                                    <option value={"HOME"}>
+                                                        CASA
                                                     </option>
-                                                    <option value={"Work"}>
-                                                        Trabajo
+                                                    <option value={"WORK"}>
+                                                        TRABAJO
                                                     </option>
-                                                    <option value={"Other"}>
-                                                        Otro
+                                                    <option value={"OTHER"}>
+                                                        OTRO
                                                     </option>
                                                 </select>
                                             </div>
