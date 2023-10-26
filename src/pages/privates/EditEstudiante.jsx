@@ -129,6 +129,7 @@ const EditEstudiante = () => {
 
     // Define la función que se ejecutará al enviar el formulario de dirección
     const onSubmitDireccion = handleSubmitDireccion((data) => {
+        console.log(data);
         mutateCrDireccion(data);
     });
 
@@ -461,7 +462,7 @@ const EditEstudiante = () => {
                                                             ? "input-error"
                                                             : ""
                                                     }`}
-                                                    {...register(
+                                                    {...registerDireccion(
                                                         "address_type",
                                                         {
                                                             required: true,
@@ -503,6 +504,7 @@ const EditEstudiante = () => {
                                                 <th>Ciudad</th>
                                                 <th>Códigos postal</th>
                                                 <th>Estado</th>
+                                                <th>Tipo de dirección</th>
                                                 <th>Acciones</th>
                                                 <th></th>
                                             </tr>
