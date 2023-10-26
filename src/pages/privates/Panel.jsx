@@ -238,10 +238,10 @@ const Panel = () => {
                                                             <td>
                                                                 {(gender ===
                                                                     "MALE" &&
-                                                                    "HOMBRE") ||
+                                                                    "MASCULINO") ||
                                                                     (gender ===
                                                                         "FEMALE" &&
-                                                                        "MUJER") ||
+                                                                        "FEMENINO") ||
                                                                     (gender ===
                                                                         "OTHER" &&
                                                                         "OTRO")}
