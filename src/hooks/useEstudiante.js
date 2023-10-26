@@ -63,7 +63,13 @@ export const useEstudiante = () => {
     };
 
     const axiosGetEstudianteById = async (id) => {
-        return await pruebaApi.get(`estudiante/${id}`).then(({ data }) => data);
+        try {
+            return await pruebaApi
+                .get(`estudiante/${id}`)
+                .then(({ data }) => data);
+        } catch (error) {
+            navigate("*");
+        }
     };
 
     const readEstudiante = (id) => {
@@ -73,6 +79,7 @@ export const useEstudiante = () => {
             throwOnError: true,
             refetchOnWindowFocus: true,
             onError: (error) => {
+                navigate("/panel");
                 // Imprime el mensaje de error en la consola
                 console.error(
                     "Error al obtener el sorteo:",

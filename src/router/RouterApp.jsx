@@ -10,7 +10,6 @@ import { Toaster } from "react-hot-toast";
 import Inicio from "../pages/publics/Inicio";
 import Navbar from "../layoutComponents/Navbar";
 
-
 import Panel from "../pages/privates/Panel";
 import EditEstudiante from "../pages/privates/EditEstudiante";
 

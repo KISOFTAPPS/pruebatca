@@ -26,6 +26,8 @@ const EditEstudiante = () => {
         data: dataById,
         isLoading: isLoadingById,
         isSuccess: isSuccessById,
+        isLoadingError
+    
     } = readEstudiante(ide);
 
     // Actualiza un estudiante y gestiona su estado
