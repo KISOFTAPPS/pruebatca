@@ -48,6 +48,9 @@ const Panel = () => {
             <div className="hero-content text-center">
                 <div className="flex flex-col xl:flex-row justify-center items-center gap-5">
                     <div className="max-w-md">
+                        <h1 className="font-bold text-xl text-white">
+                            Registro de estudiantes:
+                        </h1>
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                             <form
                                 className="card-body"
@@ -154,110 +157,123 @@ const Panel = () => {
                         </div>
                     </div>
 
-                    <div className="h-72 w-[15rem] xl:w-[45rem] bg-base-100 bg-opacity-80 rounded-xl border-2 overflow-auto">
-                        {isLoading ? (
-                            <div className=" h-full w-full flex items-center justify-center">
-                                <span className="loading loading-spinner loading-lg" />
-                            </div>
-                        ) : (
-                            <>
-                                <div className="form-control w-52 m-1">
-                                    <label className="label">
-                                        <span className="label-text">
-                                            Buscar por Apellido(s)
-                                        </span>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        className={`input input-bordered input-xs`}
-                                        onChange={(e) =>
-                                            (buscarApellido.value =
-                                                e.target.value)
-                                        }
-                                        disabled={data?.estudiantes?.length < 1}
-                                    />
+                    <div>
+                        <h1 className="font-bold text-xl text-white">
+                            Listado de estudiantes:
+                        </h1>
+                        <div className="h-72 w-[15rem] xl:w-[45rem] bg-base-100 bg-opacity-80 rounded-xl border-2 overflow-auto">
+                            {isLoading ? (
+                                <div className=" h-full w-full flex items-center justify-center">
+                                    <span className="loading loading-spinner loading-lg" />
                                 </div>
+                            ) : (
+                                <>
+                                    <div className="form-control w-52 m-1">
+                                        <label className="label">
+                                            <span className="label-text">
+                                                Buscar por Apellido(s)
+                                            </span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className={`input input-bordered input-xs`}
+                                            onChange={(e) =>
+                                                (buscarApellido.value =
+                                                    e.target.value)
+                                            }
+                                            disabled={
+                                                data?.estudiantes?.length < 1
+                                            }
+                                        />
+                                    </div>
 
-                                <table className="table table-xs">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>ID</th>
-                                            <th>Primer nombre</th>
-                                            <th>Segundo nombre</th>
-                                            <th>Apellido</th>
-                                            <th>Género</th>
-                                            <th>Registro</th>
-                                            <th>Activo</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {data?.estudiantes
-                                            .filter((estudiante) =>
-                                                estudiante.last_name
-                                                    .toUpperCase()
-                                                    .includes(
-                                                        buscarApellido.value.toUpperCase()
-                                                    )
-                                            )
-                                            .map(
-                                                (
-                                                    {
-                                                        created_on,
-                                                        first_name,
-                                                        gender,
-                                                        last_name,
-                                                        middle_name,
-                                                        student_id,
-                                                        active,
-                                                    },
-                                                    index
-                                                ) => (
-                                                    <tr>
-                                                        <th>{index + 1}</th>
-                                                        <th>{student_id}</th>
-                                                        <td>{first_name}</td>
-                                                        <td>{middle_name}</td>
-                                                        <td>{last_name}</td>
-                                                        <td>{gender}</td>
-                                                        <td>
-                                                            {moment(
-                                                                created_on
-                                                            ).format(
-                                                                "DD/MM/YYYY"
-                                                            )}
-                                                        </td>
-                                                        <td className="font-extrabold">
-                                                            {active ? (
-                                                                <p className="text-green-500">
-                                                                    SI
-                                                                </p>
-                                                            ) : (
-                                                                <p className="text-red-500">
-                                                                    NO
-                                                                </p>
-                                                            )}
-                                                        </td>
-                                                        <td className="font-extrabold">
-                                                            <button
-                                                                className="btn btn-sm"
-                                                                onClick={() =>
-                                                                    handleGoTo(
-                                                                        student_id
-                                                                    )
-                                                                }
-                                                            >
-                                                                INFO/EDIT
-                                                            </button>
-                                                        </td>
-                                                    </tr>
+                                    <table className="table table-xs">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>ID</th>
+                                                <th>Primer nombre</th>
+                                                <th>Segundo nombre</th>
+                                                <th>Apellido</th>
+                                                <th>Género</th>
+                                                <th>Registro</th>
+                                                <th>Activo</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {data?.estudiantes
+                                                .filter((estudiante) =>
+                                                    estudiante.last_name
+                                                        .toUpperCase()
+                                                        .includes(
+                                                            buscarApellido.value.toUpperCase()
+                                                        )
                                                 )
-                                            )}
-                                    </tbody>
-                                </table>
-                            </>
-                        )}
+                                                .map(
+                                                    (
+                                                        {
+                                                            created_on,
+                                                            first_name,
+                                                            gender,
+                                                            last_name,
+                                                            middle_name,
+                                                            student_id,
+                                                            active,
+                                                        },
+                                                        index
+                                                    ) => (
+                                                        <tr>
+                                                            <th>{index + 1}</th>
+                                                            <th>
+                                                                {student_id}
+                                                            </th>
+                                                            <td>
+                                                                {first_name}
+                                                            </td>
+                                                            <td>
+                                                                {middle_name}
+                                                            </td>
+                                                            <td>{last_name}</td>
+                                                            <td>{gender}</td>
+                                                            <td>
+                                                                {moment(
+                                                                    created_on
+                                                                ).format(
+                                                                    "DD/MM/YYYY"
+                                                                )}
+                                                            </td>
+                                                            <td className="font-extrabold">
+                                                                {active ? (
+                                                                    <p className="text-green-500">
+                                                                        SI
+                                                                    </p>
+                                                                ) : (
+                                                                    <p className="text-red-500">
+                                                                        NO
+                                                                    </p>
+                                                                )}
+                                                            </td>
+                                                            <td className="font-extrabold">
+                                                                <button
+                                                                    className="btn btn-sm"
+                                                                    onClick={() =>
+                                                                        handleGoTo(
+                                                                            student_id
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    INFO/EDIT
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    )
+                                                )}
+                                        </tbody>
+                                    </table>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
