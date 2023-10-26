@@ -99,6 +99,22 @@ const DireccionesEdit = ({ direccion = {}, index = 0, idd = 0 }) => {
                 />
             </th>
             <th>
+                <select
+                    type="text"
+                    className={`input input-bordered input-xs ${
+                        errors.address_type ? "input-error" : ""
+                    }`}
+                    {...register("address_type", {
+                        required: true,
+                        pattern: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/i,
+                    })}
+                >
+                    <option value={"HOME"}>CASA</option>
+                    <option value={"WORK"}>TRABAJO</option>
+                    <option value={"OTHER"}>OTRO</option>
+                </select>
+            </th>
+            <th>
                 <button
                     className="btn btn-sm btn-success"
                     form={`direccion_form_${direccion.address_id}`}

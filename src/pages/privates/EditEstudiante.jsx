@@ -448,6 +448,39 @@ const EditEstudiante = () => {
                                                     )}
                                                 />
                                             </div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text">
+                                                        *Tipo de dirección
+                                                    </span>
+                                                </label>
+                                                <select
+                                                    type="text"
+                                                    className={`input input-bordered input-xs ${
+                                                        errors.address_type
+                                                            ? "input-error"
+                                                            : ""
+                                                    }`}
+                                                    {...register(
+                                                        "address_type",
+                                                        {
+                                                            required: true,
+                                                            pattern:
+                                                                /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/i,
+                                                        }
+                                                    )}
+                                                >
+                                                    <option value={"HOME"}>
+                                                        CASA
+                                                    </option>
+                                                    <option value={"WORK"}>
+                                                        TRABAJO
+                                                    </option>
+                                                    <option value={"OTHER"}>
+                                                        OTRO
+                                                    </option>
+                                                </select>
+                                            </div>
 
                                             <div className="form-control mt-6">
                                                 <button
