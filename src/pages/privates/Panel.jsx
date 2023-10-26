@@ -235,7 +235,17 @@ const Panel = () => {
                                                                 {middle_name}
                                                             </td>
                                                             <td>{last_name}</td>
-                                                            <td>{gender}</td>
+                                                            <td>
+                                                                {(gender ===
+                                                                    "MALE" &&
+                                                                    "HOMBRE") ||
+                                                                    (gender ===
+                                                                        "FEMALE" &&
+                                                                        "MUJER") ||
+                                                                    (gender ===
+                                                                        "OTHER" &&
+                                                                        "OTRO")}
+                                                            </td>
                                                             <td>
                                                                 {moment(
                                                                     created_on
